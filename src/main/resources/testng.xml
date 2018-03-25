@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AllTest browser">
+    <test name="Chrome browser">
+        <classes>
+            <class name="myTest.GoogleTest"/>
+        </classes>
+    </test>
+</suite>
