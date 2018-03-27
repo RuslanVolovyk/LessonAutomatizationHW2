@@ -1,7 +1,7 @@
 package myTest;
 
+import core.Singleton;
 import org.testng.annotations.*;
-import static core.DriverInit.*;
 
 public class BaseTest {
 
@@ -11,7 +11,6 @@ public class BaseTest {
     }
     @BeforeMethod
     public void beforeMethod() {
-//        driver = setDriver();
         System.out.println("Before Method");
     }
     @BeforeClass
@@ -21,10 +20,7 @@ public class BaseTest {
     }
     @AfterMethod
     public void closeDriver() {
-        if (driver != null) {
-            driver.manage().deleteAllCookies();
-            driver.close();
-        }
+        Singleton.getInstance().destroy();
         System.out.println("After Method");
     }
     @AfterTest

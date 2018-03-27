@@ -10,8 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * Created by Администратор on 25.03.2018.
  */
 public class GeneralActions {
-    private DriverInit prototype = new DriverInit();
-    private WebDriver driver = prototype.copy().setDriver();
+    protected WebDriver driver = Singleton.getInstance().getDriver();
     private WebDriverWait wait = new WebDriverWait(driver, 30);
 
 
