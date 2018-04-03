@@ -43,10 +43,7 @@ public class Singleton extends Options {
         System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
         driver = new ChromeDriver(chromeOptions());
         EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
-        EventHandler eventHandler = new EventHandler() {
-        };
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        EventHandler eventHandler = new EventHandler() {};
         driver = eventDriver.register(eventHandler);
 
         return driver;

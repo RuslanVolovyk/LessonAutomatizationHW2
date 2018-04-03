@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
  */
 public class LoginPages extends GeneralActions {
     private By inputValue = By.xpath("//*[@id=\"lst-ib\"]");
-    private By searchInput =By.id("searchInput");
+    private By searchInput =By.id("searchInput1");
 
     public void goToGoogle() {
         navigate(Utils.getURL());
@@ -17,11 +17,13 @@ public class LoginPages extends GeneralActions {
         getWebElement(inputValue).submit();
     }
 
-    public void goToWiki() {
+    public void goToWiki() throws InterruptedException {
         navigate(Utils.getUrlwiki());
-        getWebElement(searchInput).sendKeys("Banana");
-        waitForElementToBeClickable(searchInput);
-        getWebElement(searchInput).submit();
+        isDisplayed(searchInput);
+//        getWebElement(searchInput).sendKeys("Banana");
+//        System.out.println(isDisplayed(searchInput));
+//        waitForpresenceOfElementLocated(searchInput);
+//        getWebElement(searchInput).submit();
 
     }
 }

@@ -7,14 +7,14 @@ import pages.LoginPages;
  * Created by Администратор on 25.03.2018.
  */
 public class GoogleTest extends BaseTest {
-    @Test
-    public void openGooglePageTest() {
-        LoginPages page = new LoginPages();
-        page.goToGoogle();
-    }
+//    @Test
+//    public void openGooglePageTest() {
+//        LoginPages page = new LoginPages();
+//        page.goToGoogle();
+//    }
 
     @Test
-    public void openWikiPageTest() {
+    public void openWikiPageTest() throws InterruptedException {
         LoginPages page = new LoginPages();
         page.goToWiki();
     }

@@ -28,16 +28,19 @@ public abstract class EventHandler implements WebDriverEventListener {
 
     @Override
     public void beforeNavigateTo(String s, WebDriver webDriver) {
+        System.out.println("Just before beforeNavigateTo " + s);
 
     }
 
     @Override
     public void afterNavigateTo(String s, WebDriver webDriver) {
+        System.out.println("Open Url: " + s);
 
     }
 
     @Override
     public void beforeNavigateBack(WebDriver webDriver) {
+        System.out.println("Just before beforeNavigateBack " + webDriver.getCurrentUrl());
 
     }
 
@@ -48,6 +51,7 @@ public abstract class EventHandler implements WebDriverEventListener {
 
     @Override
     public void beforeNavigateForward(WebDriver webDriver) {
+        System.out.println("Just before beforeNavigateForward " + webDriver.getCurrentUrl());
 
     }
 
@@ -68,44 +72,56 @@ public abstract class EventHandler implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
+        System.out.println("Search for element: " + by.toString());
 
     }
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
+        System.out.println("Element found successfully: " + by.toString());
 
     }
 
     @Override
     public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
 
+
     }
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
+        System.out.println("Element successfully clicked " + webElement.toString());
 
     }
 
     @Override
     public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
 
+        //  System.out.println("Fill input " + webElement.getAttribute("id")+ " with value " + charSequences.toString() );
     }
 
     @Override
     public void afterChangeValueOf(WebElement webElement, WebDriver webDriver, CharSequence[] charSequences) {
 
+        System.out.println("Value successfully changed ");
     }
 
     @Override
     public void beforeScript(String s, WebDriver webDriver) {
+        System.out.println("Just before beforeScript " + s);
 
     }
 
     @Override
     public void afterScript(String s, WebDriver webDriver) {
+        System.out.println("Inside the afterScript to, Script is " + s);
 
     }
 
+    @Override
+    public void onException(Throwable throwable, WebDriver webDriver) {
+        System.out.println("Error message: " + throwable.getMessage());
+    }
     @Override
     public void beforeSwitchToWindow(String s, WebDriver webDriver) {
 
@@ -113,11 +129,6 @@ public abstract class EventHandler implements WebDriverEventListener {
 
     @Override
     public void afterSwitchToWindow(String s, WebDriver webDriver) {
-
-    }
-
-    @Override
-    public void onException(Throwable throwable, WebDriver webDriver) {
 
     }
 }
