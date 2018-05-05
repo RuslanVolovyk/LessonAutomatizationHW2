@@ -40,40 +40,29 @@ public class GeneralActions extends StopWatch {
     }
 
 
-    protected boolean isDisplayed(By locator) throws InterruptedException{
+    protected boolean isDisplayed(By locator) throws InterruptedException {
         boolean isVisible = false;
         start();
         while (getElapsedTimeSecs() < 15) {
             try {
-              boolean displayed = driver.findElement(locator).isDisplayed();
-                if (displayed){
+                boolean displayed = driver.findElement(locator).isDisplayed();
+                if (displayed) {
                     stop();
                     return true;
                 }
-                Thread.sleep(1000);
             } catch (NoSuchElementException e) {
-                Thread.sleep(1000);
-                 isVisible = false;
+                Thread.sleep(3000);
+                isVisible = false;
             }
         }
-               stop();
+        stop();
         return isVisible;
 
     }
 
     protected boolean isEnabled(By locator) {
-        boolean isEnabled;
-        start();
-        while (getElapsedTimeSecs() < 3) {
-            try {
-                driver.findElement(locator).isEnabled();
-            } catch (NoSuchElementException e) {
-                return isEnabled = false;
-            }
-        }
-        isEnabled = true;
-        stop();
-        return isEnabled;
+
+        return false;
     }
 
 

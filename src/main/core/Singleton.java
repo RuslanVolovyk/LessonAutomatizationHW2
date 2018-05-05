@@ -3,6 +3,7 @@ package core;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
@@ -38,12 +39,14 @@ public class Singleton extends Options {
             return driver;
         }
     }
-
+    @Parameters("browser")
     public synchronized WebDriver setDriver() {
         System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
         driver = new ChromeDriver(chromeOptions());
+
         EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
-        EventHandler eventHandler = new EventHandler() {};
+        EventHandler eventHandler = new EventHandler() {
+        };
         driver = eventDriver.register(eventHandler);
 
         return driver;

@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
  */
 public class LoginPages extends GeneralActions {
     private By inputValue = By.xpath("//*[@id=\"lst-ib\"]");
-    private By searchInput =By.id("searchInput1");
+    private By searchInput =By.id("searchInput");
 
     public void goToGoogle() {
         navigate(Utils.getURL());
