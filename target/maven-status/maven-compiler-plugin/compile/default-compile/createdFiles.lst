@@ -1,0 +1,9 @@
+pages\LoginPages.class
+core\StopWatch.class
+core\GeneralActions.class
+core\Singleton$1.class
+core\Utils.class
+core\Singleton.class
+core\Options.class
+core\EventHandler.class
+core\CustomTestListener.class

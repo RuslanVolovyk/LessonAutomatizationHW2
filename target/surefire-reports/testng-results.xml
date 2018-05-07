@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="14314" started-at="2018-05-07T09:08:23Z" finished-at="2018-05-07T09:08:37Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="14314" started-at="2018-05-07T09:08:23Z" finished-at="2018-05-07T09:08:37Z">
+      <class name="myTest.BaseTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:myTest.BaseTest@2f66f0d0]" name="beforeTest" is-config="true" duration-ms="58" started-at="2018-05-07T09:08:23Z" finished-at="2018-05-07T09:08:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="closeDriverTest()[pri:0, instance:myTest.BaseTest@2f66f0d0]" name="closeDriverTest" is-config="true" duration-ms="1" started-at="2018-05-07T09:08:37Z" finished-at="2018-05-07T09:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriverTest -->
+      </class> <!-- myTest.BaseTest -->
+      <class name="myTest.GoogleTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-05-07T09:08:23Z" finished-at="2018-05-07T09:08:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="openGooglePageTest()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="openGooglePageTest" duration-ms="5412" started-at="2018-05-07T09:08:23Z" finished-at="2018-05-07T09:08:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGooglePageTest -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="closeDriver" is-config="true" duration-ms="919" started-at="2018-05-07T09:08:29Z" finished-at="2018-05-07T09:08:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-05-07T09:08:30Z" finished-at="2018-05-07T09:08:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="openWikiPageTest()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="openWikiPageTest" duration-ms="5674" started-at="2018-05-07T09:08:30Z" finished-at="2018-05-07T09:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openWikiPageTest -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="closeDriver" is-config="true" duration-ms="995" started-at="2018-05-07T09:08:36Z" finished-at="2018-05-07T09:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:myTest.GoogleTest@4d62f4c6]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-05-07T09:08:37Z" finished-at="2018-05-07T09:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- myTest.GoogleTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

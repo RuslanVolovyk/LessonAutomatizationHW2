@@ -1,7 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="N11 Test Suite" >
+    <listeners>
+        <listener class-name="core.CustomTestListener"/>
+     </listeners>
 
-<suite name="AllTest browser">
-    <test name="Chrome browser">
+    <test name="LoginTest">
         <classes>
             <class name="myTest.GoogleTest"/>
         </classes>
