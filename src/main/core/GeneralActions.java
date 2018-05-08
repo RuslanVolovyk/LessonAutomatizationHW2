@@ -17,8 +17,6 @@ import java.util.Set;
 public class GeneralActions extends StopWatch {
     protected WebDriver driver = Singleton.getInstance().getDriver();
     private WebDriverWait wait = new WebDriverWait(driver, 30);
-
-    private final static String wordsMail = "ghjsnsmyudhkjtymnmdsmnrshyjftyjfty";
     private static StringBuilder builder;
 
     protected void navigate(String url) {
@@ -33,17 +31,10 @@ public class GeneralActions extends StopWatch {
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
 
-    public boolean waitForpresenceOfElementLocated(By element) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(element));
-
-        return false;
-    }
-
-
     protected boolean isDisplayed(By locator) throws InterruptedException {
         boolean isVisible = false;
         start();
-        while (getElapsedTimeSecs() < 15) {
+        while (getElapsedTimeSecs() < 6) {
             try {
                 boolean displayed = driver.findElement(locator).isDisplayed();
                 if (displayed) {
@@ -51,7 +42,7 @@ public class GeneralActions extends StopWatch {
                     return true;
                 }
             } catch (NoSuchElementException e) {
-                Thread.sleep(3000);
+                Thread.sleep(1500);
                 isVisible = false;
             }
         }
@@ -60,33 +51,62 @@ public class GeneralActions extends StopWatch {
 
     }
 
-    protected boolean isEnabled(By locator) {
+    protected boolean isEnabled(By locator) throws InterruptedException {
+        boolean isVisible = false;
+        start();
+        while (getElapsedTimeSecs() < 6) {
+            try {
+                boolean displayed = driver.findElement(locator).isEnabled();
+                if (displayed) {
+                    stop();
+                    return true;
+                }
+            } catch (NoSuchElementException e) {
+                Thread.sleep(1500);
+                isVisible = false;
+            }
+        }
+        stop();
+        return isVisible;
 
-        return false;
     }
 
+    protected boolean isSelected(By locator) throws InterruptedException {
+        boolean isVisible = false;
+        start();
+        while (getElapsedTimeSecs() < 6) {
+            try {
+                boolean displayed = driver.findElement(locator).isSelected();
+                if (displayed) {
+                    stop();
+                    return true;
+                }
+            } catch (NoSuchElementException e) {
+                Thread.sleep(1500);
+                isVisible = false;
+            }
+        }
+        stop();
+        return isVisible;
 
-    private static String randomStringFirstName() {
-        Set<String> identifiers = new HashSet<String>();
+    }
+
+    //generate random email address
+    private static String randomEmailAddress() {
+        Set<String> identifiers = new HashSet<>();
         Random rand = new Random();
         builder = new StringBuilder();
         while (builder.toString().length() == 0) {
             int length = rand.nextInt(5) + 5;
             for (int i = 0; i < length; i++) {
-                builder.append(wordsMail.charAt(rand.nextInt(wordsMail.length())));
+                builder.append(Utils.WORDSFOREMAIL.charAt(rand.nextInt(Utils.WORDSFOREMAIL.length())));
             }
             if (identifiers.contains(builder.toString())) {
                 builder = new StringBuilder();
             }
-
         }
-        String s = builder.toString() + "@gmail.com";
-        return s;
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println(randomStringFirstName());
+        String randomEmailAddress = builder.toString() + "@gmail.com";
+        return randomEmailAddress;
     }
 
 }

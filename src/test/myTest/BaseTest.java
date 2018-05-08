@@ -22,25 +22,6 @@ public class BaseTest {
         System.out.println("Before Method");
     }
 
-//    @Parameters("browser")
-//    @BeforeClass
-//    public WebDriver beforeClass(String browser) {
-
-//            if (browser.equals("chrome")) {
-//                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
-//                driver = new ChromeDriver();
-//            } else if (browser.equals("firefox")) {
-//                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
-//                driver = new FirefoxDriver();
-//            } else if (browser.equals("ie")) {
-//                System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "/drivers/IEDriverServer.exe");
-//                driver = new InternetExplorerDriver();
-//            }
-
-
-//        return driver;
-//    }
-
 
     @AfterMethod
     public void closeDriver() {

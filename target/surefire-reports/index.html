@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,6 +108,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="myTest.GoogleTest" hash-for-method="openWikiPageTest">openWikiPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="myTest.GoogleTest" hash-for-method="openWikiPageTest2">openWikiPageTest2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -140,6 +145,13 @@
                   <a name="openWikiPageTest">
                   </a> <!-- openWikiPageTest -->
                   <span class="method-name">openWikiPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openWikiPageTest2">
+                  </a> <!-- openWikiPageTest2 -->
+                  <span class="method-name">openWikiPageTest2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,20 +208,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openWikiPageTest')
+data.setCell(0, 1, 'openWikiPageTest2')
 data.setCell(0, 2, 'myTest.GoogleTest')
-data.setCell(0, 3, 5674);
+data.setCell(0, 3, 38321);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openGooglePageTest')
+data.setCell(1, 1, 'openWikiPageTest')
 data.setCell(1, 2, 'myTest.GoogleTest')
-data.setCell(1, 3, 5412);
+data.setCell(1, 3, 37765);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'openGooglePageTest')
+data.setCell(2, 2, 'myTest.GoogleTest')
+data.setCell(2, 3, 7353);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -254,38 +270,50 @@ return data;
               <div class="chronological-class-name">myTest.GoogleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">113 ms</span>
+                <span class="method-start">61 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openGooglePageTest</span>
-                <span class="method-start">323 ms</span>
+                <span class="method-start">248 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">6130 ms</span>
+                <span class="method-start">8196 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">7069 ms</span>
+                <span class="method-start">8759 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openWikiPageTest</span>
-                <span class="method-start">7088 ms</span>
+                <span class="method-start">8768 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">13277 ms</span>
+                <span class="method-start">47329 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">47877 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openWikiPageTest2</span>
+                <span class="method-start">47893 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeDriver</span>
+                <span class="method-start">86970 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14295 ms</span>
+                <span class="method-start">87529 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">myTest.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriverTest</span>
-                <span class="method-start">14302 ms</span>
+                <span class="method-start">87535 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

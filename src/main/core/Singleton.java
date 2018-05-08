@@ -2,6 +2,7 @@ package core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
@@ -16,8 +17,12 @@ import java.util.concurrent.TimeUnit;
  */
 @Listeners({CustomTestListener.class})
 public class Singleton extends Options {
+    private static final String IE_DRIVER_PATH = System.getProperty("user.dir") + "/src/main/resources/drivers/IEDriverServer.exe";
+    private static final String DRIVER_NAME_IE = "webdriver.ie.driver";
+
     private static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe";
     private static final String DRIVER_NAME_CHROME = "webdriver.chrome.driver";
+
     private static Singleton instance = null;
     private WebDriver driver;
 
@@ -53,8 +58,15 @@ public class Singleton extends Options {
     }
 
     private synchronized WebDriver setDriver() {
-        System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
-        driver = new ChromeDriver(chromeOptions());
+//        System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
+//        driver = new ChromeDriver(chromeOptions());
+
+
+        System.setProperty(DRIVER_NAME_IE, IE_DRIVER_PATH);
+        driver = new InternetExplorerDriver();
+
+
+
 
         EventFiringWebDriver eventDriver = new EventFiringWebDriver(driver);
         EventHandler eventHandler = new EventHandler() {

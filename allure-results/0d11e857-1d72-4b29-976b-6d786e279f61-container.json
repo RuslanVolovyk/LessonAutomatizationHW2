@@ -1,0 +1,1 @@
+{"uuid":"0d11e857-1d72-4b29-976b-6d786e279f61","name":"myTest.GoogleTest","start":1525779008674,"stop":1525779017589,"children":["43976d8c-6994-4e39-a776-829c95bd081c"],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","start":1525779017576,"stop":1525779017576}]}

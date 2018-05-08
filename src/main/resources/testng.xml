@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="N11 Test Suite" >
+<suite name="All test" >
     <listeners>
         <listener class-name="core.CustomTestListener"/>
      </listeners>
 
-    <test name="LoginTest">
+    <test name="Google Tests">
         <classes>
             <class name="myTest.GoogleTest"/>
         </classes>

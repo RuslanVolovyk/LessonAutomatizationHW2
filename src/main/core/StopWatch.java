@@ -6,20 +6,18 @@ public class StopWatch {
     private  boolean running = false;
 
 
-    public void start() {
+    void start() {
         this.startTime = System.currentTimeMillis();
         this.running = true;
     }
 
-
-    public  void stop() {
+    void stop() {
         this.stopTime = System.currentTimeMillis();
         this.running = false;
     }
 
-
     //elaspsed time in milliseconds
-    public long getElapsedTime() {
+     long getElapsedTime() {
         long elapsed;
         if (running) {
             elapsed = (System.currentTimeMillis() - startTime);
@@ -28,10 +26,8 @@ public class StopWatch {
         }
         return elapsed;
     }
-
-
     //elaspsed time in seconds
-    public long getElapsedTimeSecs() {
+    long getElapsedTimeSecs() {
         long elapsed;
         if (running) {
             elapsed = ((System.currentTimeMillis() - startTime) / 1000);
@@ -43,13 +39,3 @@ public class StopWatch {
 
 
 }
-//    public static void main(String[] args) {
-//        start();
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        getElapsedTimeSecs();
-//        System.out.println(getElapsedTimeSecs());
-//    }

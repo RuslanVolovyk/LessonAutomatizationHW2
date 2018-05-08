@@ -4,8 +4,6 @@ import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
@@ -28,7 +26,6 @@ public class CustomTestListener extends TestListenerAdapter {
 
     @Attachment(value = "Page screenshot", type = "image/png")
     private byte[] saveScreenshot(ITestResult result){
-
         WebDriver driver = Singleton.getInstance().getDriver();
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
