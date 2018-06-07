@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="93.401" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="26.782" tests="3" errors="0" skipped="0" failures="1">
   <properties>
     <property name="idea.version" value="2017.2.6"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -61,7 +61,29 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="openGooglePageTest" classname="myTest.GoogleTest" time="7.92"/>
-  <testcase name="openWikiPageTest" classname="myTest.GoogleTest" time="38.55"/>
-  <testcase name="openWikiPageTest2" classname="myTest.GoogleTest" time="39.053"/>
+  <testcase name="openGooglePageTest" classname="myTest.GoogleTest" time="4.198">
+    <failure message="expected [Кокос - Пошук Google] but found [https://www.google.com.ua/search?source=hp&amp;ei=H43xWr2VCILzsAGLhpzwDQ&amp;q=%D0%9A%D0%BE%D0%BA%D0%BE%D1%81&amp;oq=&amp;gs_l=]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Кокос - Пошук Google] but found [https://www.google.com.ua/search?source=hp&ei=H43xWr2VCILzsAGLhpzwDQ&q=%D0%9A%D0%BE%D0%BA%D0%BE%D1%81&oq=&gs_l=]
+	at myTest.GoogleTest.openGooglePageTest(GoogleTest.java:22)
+]]></failure>
+    <system-out><![CDATA[Before Test
+Before Method
+Just before beforeNavigateTo https://www.google.com.ua/
+Open Url: https://www.google.com.ua/
+Search for element: By.xpath: //*[@id="lst-ib"]
+Element found successfully: By.xpath: //*[@id="lst-ib"]
+Value successfully changed 
+Search for element: By.xpath: //*[@id="lst-ib"]
+Element found successfully: By.xpath: //*[@id="lst-ib"]
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91) on port 36111
+Only local connections are allowed.
+May 08, 2018 2:42:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="openWikiPageTest" classname="myTest.GoogleTest" time="6.61"/>
+  <testcase name="openWikiPageTest2" classname="myTest.GoogleTest" time="5.945"/>
 </testsuite>

@@ -9,11 +9,17 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">87,541</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">19,870</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">myTest.GoogleTest</td><td><a href="#m0">openGooglePageTest</a></td><td rowspan="1">1525779064856</td><td rowspan="1">7353</td></tr><tr class="passedeven"><td><a href="#m1">openWikiPageTest</a></td><td rowspan="1">1525779073376</td><td rowspan="1">37765</td></tr><tr class="passedeven"><td><a href="#m2">openWikiPageTest2</a></td><td rowspan="1">1525779112501</td><td rowspan="1">38321</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">myTest.GoogleTest</td><td><a href="#m0">openGooglePageTest</a></td><td rowspan="1">1525779742478</td><td rowspan="1">3814</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">myTest.GoogleTest</td><td><a href="#m1">openWikiPageTest</a></td><td rowspan="1">1525779747735</td><td rowspan="1">5757</td></tr><tr class="passedeven"><td><a href="#m2">openWikiPageTest2</a></td><td rowspan="1">1525779755253</td><td rowspan="1">5529</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">myTest.GoogleTest#openGooglePageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Surefire test</h2><h3 id="m0">myTest.GoogleTest#openGooglePageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Кокос - Пошук Google] but found [https://www.google.com.ua/search?source=hp&amp;ei=H43xWr2VCILzsAGLhpzwDQ&amp;q=%D0%9A%D0%BE%D0%BA%D0%BE%D1%81&amp;oq=&amp;gs_l=]
+	at pages.LoginPages.goToGoogle_aroundBody0(LoginPages.java:24)
+	at pages.LoginPages$AjcClosure1.run(LoginPages.java:1)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at pages.LoginPages.goToGoogle(LoginPages.java:21)
+	at myTest.GoogleTest.openGooglePageTest(GoogleTest.java:22)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">myTest.GoogleTest#openWikiPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">myTest.GoogleTest#openWikiPageTest2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

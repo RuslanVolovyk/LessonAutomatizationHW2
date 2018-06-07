@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="myTest.GoogleTest" hash-for-method="openGooglePageTest">openGooglePageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +114,6 @@
                       <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
                     <div class="method-list-content passed suite-Surefire_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="myTest.GoogleTest" hash-for-method="openGooglePageTest">openGooglePageTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="myTest.GoogleTest" hash-for-method="openWikiPageTest">openWikiPageTest</a> <!-- method navigator-link -->
@@ -127,9 +136,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">myTest.GoogleTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -138,8 +147,24 @@
                   <a name="openGooglePageTest">
                   </a> <!-- openGooglePageTest -->
                   <span class="method-name">openGooglePageTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Кокос - Пошук Google] but found [https://www.google.com.ua/search?source=hp&amp;ei=H43xWr2VCILzsAGLhpzwDQ&amp;q=%D0%9A%D0%BE%D0%BA%D0%BE%D1%81&amp;oq=&amp;gs_l=]
+	at pages.LoginPages.goToGoogle_aroundBody0(LoginPages.java:24)
+	at pages.LoginPages$AjcClosure1.run(LoginPages.java:1)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at pages.LoginPages.goToGoogle(LoginPages.java:21)
+	at myTest.GoogleTest.openGooglePageTest(GoogleTest.java:22)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">myTest.GoogleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="openWikiPageTest">
@@ -210,22 +235,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openWikiPageTest2')
+data.setCell(0, 1, 'openWikiPageTest')
 data.setCell(0, 2, 'myTest.GoogleTest')
-data.setCell(0, 3, 38321);
+data.setCell(0, 3, 5757);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openWikiPageTest')
+data.setCell(1, 1, 'openWikiPageTest2')
 data.setCell(1, 2, 'myTest.GoogleTest')
-data.setCell(1, 3, 37765);
+data.setCell(1, 3, 5529);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'openGooglePageTest')
 data.setCell(2, 2, 'myTest.GoogleTest')
-data.setCell(2, 3, 7353);
+data.setCell(2, 3, 3814);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -270,50 +295,52 @@ return data;
               <div class="chronological-class-name">myTest.GoogleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">61 ms</span>
+                <span class="method-start">100 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">openGooglePageTest</span>
-                <span class="method-start">248 ms</span>
+                <span class="method-start">288 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">8196 ms</span>
+                <span class="method-start">4522 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">8759 ms</span>
+                <span class="method-start">5526 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openWikiPageTest</span>
-                <span class="method-start">8768 ms</span>
+                <span class="method-start">5545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">47329 ms</span>
+                <span class="method-start">12164 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">47877 ms</span>
+                <span class="method-start">13054 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openWikiPageTest2</span>
-                <span class="method-start">47893 ms</span>
+                <span class="method-start">13063 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">86970 ms</span>
+                <span class="method-start">19018 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">87529 ms</span>
+                <span class="method-start">19861 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">myTest.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriverTest</span>
-                <span class="method-start">87535 ms</span>
+                <span class="method-start">19865 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -17,8 +17,8 @@ import java.util.concurrent.TimeUnit;
  */
 @Listeners({CustomTestListener.class})
 public class Singleton extends Options {
-    private static final String IE_DRIVER_PATH = System.getProperty("user.dir") + "/src/main/resources/drivers/IEDriverServer.exe";
-    private static final String DRIVER_NAME_IE = "webdriver.ie.driver";
+//    private static final String IE_DRIVER_PATH = System.getProperty("user.dir") + "/src/main/resources/drivers/IEDriverServer.exe";
+//    private static final String DRIVER_NAME_IE = "webdriver.ie.driver";
 
     private static final String CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe";
     private static final String DRIVER_NAME_CHROME = "webdriver.chrome.driver";
@@ -58,12 +58,12 @@ public class Singleton extends Options {
     }
 
     private synchronized WebDriver setDriver() {
-//        System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
-//        driver = new ChromeDriver(chromeOptions());
+        System.setProperty(DRIVER_NAME_CHROME, CHROME_DRIVER_PATH);
+        driver = new ChromeDriver(chromeOptions());
 
 
-        System.setProperty(DRIVER_NAME_IE, IE_DRIVER_PATH);
-        driver = new InternetExplorerDriver();
+//        System.setProperty(DRIVER_NAME_IE, IE_DRIVER_PATH);
+//        driver = new InternetExplorerDriver();
 
 
 

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 93.401 s - in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 26.782 s <<< FAILURE! - in TestSuite
+openGooglePageTest(myTest.GoogleTest)  Time elapsed: 4.198 s  <<< FAILURE!
+java.lang.AssertionError: expected [Кокос - Пошук Google] but found [https://www.google.com.ua/search?source=hp&ei=H43xWr2VCILzsAGLhpzwDQ&q=%D0%9A%D0%BE%D0%BA%D0%BE%D1%81&oq=&gs_l=]
+	at myTest.GoogleTest.openGooglePageTest(GoogleTest.java:22)
+

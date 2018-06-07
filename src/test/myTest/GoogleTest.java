@@ -17,9 +17,10 @@ public class GoogleTest extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     @Description("Test openGooglePageTest")
     @Test
-    public void openGooglePageTest() {
+    public void openGooglePageTest() throws InterruptedException {
         LoginPages page = new LoginPages();
         page.goToGoogle();
+
     }
 
     @Severity(SeverityLevel.TRIVIAL)
