@@ -7,7 +7,14 @@
 
     <test name="Google Tests">
         <classes>
-            <class name="myTest.GoogleTest"/>
+            <class name="myTest.GoogleTest">
+            <methods>
+                <!--<include name="openGooglePageTest"/>-->
+                <!--<include name="workUaTest"/>-->
+                <!--<include name="rabotaUaTest"/>-->
+                <include name="moiKrugTest"/>
+            </methods>
+            </class>
         </classes>
     </test>
 </suite>

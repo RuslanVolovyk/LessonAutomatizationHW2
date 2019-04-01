@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class GeneralActions extends StopWatch {
     protected WebDriver driver = Singleton.getInstance().getDriver();
-    private WebDriverWait wait = new WebDriverWait(driver, 30);
+    private WebDriverWait wait = new WebDriverWait(driver, 15);
     private static StringBuilder builder;
 
     protected void navigate(String url) {

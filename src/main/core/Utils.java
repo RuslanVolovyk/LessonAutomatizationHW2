@@ -14,4 +14,16 @@ public class Utils {
     public static String getUrlwiki() {
         return URLWIKI;
     }
+
+    public final static String URL_WORK =  "https://www.work.ua/";
+    public final static String LOGIN_FOR_WORK =  "ai8619242@gmail.com";
+    public final static String PASSWORD_FOR_WORK =  "qwertyasdf1";
+
+    public final static String URLRABOTA =  "https://rabota3333.ua/";
+    public final static String LOGINFORRABOTA  =  "ai8619242@gmail.com ";
+    public final static String PASSWORDFORRABOTA  =  "andersen";
+
+    public final static String URLMOIKRUG =  "https://moikrug.ru/";
+    public final static String LOGINFORMOIKRUG  =  "ai8619242@gmail.com";
+    public final static String PASSWORDFORMOIKRUG  =  "andersen";
 }

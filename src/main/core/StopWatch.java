@@ -1,9 +1,13 @@
 package core;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class StopWatch {
-    private  long startTime = 0;
-    private  long stopTime = 0;
-    private  boolean running = false;
+    private long startTime = 0;
+    private long stopTime = 0;
+    private boolean running = false;
 
 
     void start() {
@@ -17,7 +21,7 @@ public class StopWatch {
     }
 
     //elaspsed time in milliseconds
-     long getElapsedTime() {
+    long getElapsedTime() {
         long elapsed;
         if (running) {
             elapsed = (System.currentTimeMillis() - startTime);
@@ -26,6 +30,7 @@ public class StopWatch {
         }
         return elapsed;
     }
+
     //elaspsed time in seconds
     long getElapsedTimeSecs() {
         long elapsed;
@@ -38,4 +43,28 @@ public class StopWatch {
     }
 
 
-}
+    public static void main(String[] args) {
+
+//        List<String> list = new ArrayList<>();
+//        list.add("A");
+//        list.add("B");
+//        list.add("A");
+//        list.add("B");
+////        for (int i = 0; i < list.size(); i++)
+////            System.out.print(list.remove(i));
+//
+//
+//        String element = "A";
+//        for (int i = 0; i < list.size(); i++)
+//            if (list.get(i).equals(element)) {
+//                list.remove(element);
+//                i--;
+//            }
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.remove(2);
+        System.out.println(list);
+}}

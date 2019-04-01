@@ -23,6 +23,11 @@ public class BaseTest {
     }
 
 
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("beforeClass");
+    }
+
     @AfterMethod
     public void closeDriver() {
         Singleton.getInstance().destroy();
@@ -39,5 +44,18 @@ public class BaseTest {
 
         System.out.println("After Class");
     }
+
+    @BeforeSuite
+    public void beforeSuite() {
+
+        System.out.println("BeforeSuite");
+    }
+ @AfterSuite
+    public void afterSuite() {
+
+        System.out.println("AfterSuite");
+    }
+
+
 
 }

@@ -6,7 +6,9 @@ import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.LoginPages;
-
+import pages.MoikrugPage;
+import pages.RabotaPage;
+import pages.WorkPage;
 
 
 @Listeners({CustomTestListener.class})
@@ -20,22 +22,37 @@ public class GoogleTest extends BaseTest {
     public void openGooglePageTest() throws InterruptedException {
         LoginPages page = new LoginPages();
         page.goToGoogle();
+        System.out.println("Test");
+
 
     }
 
     @Severity(SeverityLevel.TRIVIAL)
-    @Description("Test openWikiPageTest")
+    @Description("Test workUaTest")
     @Test
-    public void openWikiPageTest() throws InterruptedException {
-        LoginPages page = new LoginPages();
-        page.goToWiki();
+    public void workUaTest()  {
+        WorkPage workPage = new WorkPage();
+        workPage.openSite();
+        workPage.login();
+
+
     }
 
     @Severity(SeverityLevel.MINOR)
     @Test
-    @Story("Invalid username and password login test")
-    public void openWikiPageTest2() throws InterruptedException {
-        LoginPages page = new LoginPages();
-        page.goToWiki();
+    @Story("Test rabotaUaTest")
+    public void rabotaUaTest()  {
+        RabotaPage rabotaPage = new RabotaPage();
+        rabotaPage.openSite();
+        rabotaPage.login();
+    }
+
+    @Severity(SeverityLevel.MINOR)
+    @Test
+    @Story("Test rabotaUaTest")
+    public void moiKrugTest()  {
+        MoikrugPage moikrugPage = new MoikrugPage();
+        moikrugPage.openSite();
+        moikrugPage.login();
     }
 }
